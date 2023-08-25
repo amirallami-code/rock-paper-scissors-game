@@ -159,11 +159,8 @@ header {
   -o-border-radius: 10px;
 }
 
-header h2 {
-  color: #fff;
-  font-weight: 700;
-  font-size: 30px;
-  letter-spacing: 0.5px;
+header img {
+  width: 150px;
 }
 
 .scores {
@@ -202,8 +199,8 @@ header h2 {
     margin: 40px;
     padding: 12.5px 15px;
   }
-  header h2 {
-    padding-left: 10px;
+  header img {
+    width: 135px;
   }
   .scores {
     width: 100px;
@@ -222,9 +219,8 @@ header h2 {
     -ms-border-radius: 7px;
     -o-border-radius: 7px;
   }
-  header h2 {
-    font-size: 20px;
-    padding-left: 10px;
+  header img {
+    width: 100px;
   }
   .scores {
     width: 80px;
