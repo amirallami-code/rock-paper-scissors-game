@@ -12,7 +12,8 @@
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   line-height: 1;
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -188,6 +189,65 @@ header img {
   font-weight: 700;
   font-size: 50px;
   color: hsl(229, 25%, 31%);
+}
+
+main div {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  padding: 20px;
+  clip-path: circle();
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.circle:hover {
+  cursor: pointer;
+}
+
+.white-bg {
+  padding: 25px;
+  clip-path: circle();
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.white-bg img {
+  width: 70px;
+}
+
+.rock div {
+  box-shadow: inset 0px 7px 2px rgb(198, 198, 198);
+}
+.paper div {
+  box-shadow: inset 0px 11px 2px rgb(198, 198, 198);
+}
+.scissors div {
+  box-shadow: inset 0px 10px 2px rgb(198, 198, 198);
+}
+.margin-bottom {
+  margin-bottom: -400px;
+}
+.rock {
+  background: linear-gradient(260deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  box-shadow: inset 0px -8px 2px hsl(349, 56%, 46%);
+}
+.paper {
+  background: linear-gradient(260deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  box-shadow: inset 0px -12px 2px hsl(230, 51%, 47%);
+}
+.scissors {
+  background: linear-gradient(260deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  box-shadow: inset 0px -10px 2px hsl(40, 74%, 43%);
 }
 
 /* responsive */
