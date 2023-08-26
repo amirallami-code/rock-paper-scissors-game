@@ -263,8 +263,8 @@ main div {
 /* tablet */
 @media only screen and (max-width: 600px) {
   header {
-    width: 450px;
-    margin: 40px;
+    width: 90%;
+    margin: 40px 40px 0px 40px;
     padding: 12.5px 15px;
   }
   header img {
@@ -291,7 +291,7 @@ main div {
 /* mobile */
 @media only screen and (max-width: 375px) {
   header {
-    width: 400px;
+    width: 90%;
     height: 100px;
     margin: 25px;
     padding: 10px;
