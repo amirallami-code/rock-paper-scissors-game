@@ -196,6 +196,12 @@ main div {
   align-items: center;
 }
 
+.objects {
+  height: 400px;
+  display: flex;
+  align-items: start;
+  top: 0px;
+}
 .circle {
   padding: 20px;
   clip-path: circle();
@@ -214,28 +220,23 @@ main div {
   padding: 25px;
   clip-path: circle();
   background-color: #fff;
+  box-shadow: inset 0px 7px 2px rgb(198, 198, 198);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+.objects img {
+  min-width: 70px;
+  max-width: 70px;
+  min-height: 70px;
+  max-height: 70px;
+  height: auto;
+}
 
 .white-bg img {
   width: 70px;
-}
-
-.rock div {
-  box-shadow: inset 0px 7px 2px rgb(198, 198, 198);
-}
-.paper div {
-  box-shadow: inset 0px 11px 2px rgb(198, 198, 198);
-}
-.scissors div {
-  box-shadow: inset 0px 10px 2px rgb(198, 198, 198);
-}
-.margin-bottom {
-  margin-bottom: -400px;
 }
 .rock {
   background: linear-gradient(260deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
@@ -243,11 +244,11 @@ main div {
 }
 .paper {
   background: linear-gradient(260deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-  box-shadow: inset 0px -12px 2px hsl(230, 51%, 47%);
+  box-shadow: inset 0px -8px 2px hsl(230, 51%, 47%);
 }
 .scissors {
   background: linear-gradient(260deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-  box-shadow: inset 0px -10px 2px hsl(40, 74%, 43%);
+  box-shadow: inset 0px -8px 2px hsl(40, 74%, 43%);
 }
 
 /* responsive */
