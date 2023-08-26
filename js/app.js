@@ -4,6 +4,7 @@ const rulesBtn = $.querySelector('.rules')
 const modalElem = $.querySelector('.modal')
 const closeBtn = $.querySelector('.close-button')
 
+// rules button logic
 rulesBtn.addEventListener('click', () => {
     modalElem.style.display = 'flex'
     modalElem.style.opacity = '1'
