@@ -150,7 +150,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 30px;
+  margin: 30px 30px 0px 30px;
   padding: 12.5px 20px;
   border: 3px solid hsl(217, 16%, 45%);
   border-radius: 10px;
@@ -159,11 +159,9 @@ header {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-
 header img {
   width: 150px;
 }
-
 .scores {
   display: flex;
   flex-direction: column;
@@ -179,28 +177,35 @@ header img {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-
 .scores p {
   letter-spacing: 1px;
   color: hsl(229, 64%, 46%);
 }
-
 .user-score {
   font-weight: 700;
   font-size: 50px;
   color: hsl(229, 25%, 31%);
 }
-
 main div {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-
-.objects {
-  height: 400px;
+.level-one {
   display: flex;
-  align-items: start;
-  top: 0px;
+  flex-direction: column;
+}
+.guide {
+  color: #fff;
+  font-size: 25px;
+  padding: 35px 0px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+.objects {
+  height: 370px;
+  display: flex;
+  align-items: flex-start;
 }
 .circle {
   padding: 20px;
@@ -211,16 +216,14 @@ main div {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-
 .circle:hover {
   cursor: pointer;
 }
-
 .white-bg {
-  padding: 25px;
+  padding: 35px;
   clip-path: circle();
   background-color: #fff;
-  box-shadow: inset 0px 7px 2px rgb(198, 198, 198);
+  box-shadow: inset 0px 7.5px 2px rgb(209, 209, 209);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -228,32 +231,36 @@ main div {
   -o-border-radius: 50%;
 }
 .objects img {
-  min-width: 70px;
-  max-width: 70px;
-  min-height: 70px;
-  max-height: 70px;
-  height: auto;
+  max-width: 65px;
+  height: 70px;
 }
-
 .white-bg img {
   width: 70px;
 }
 .rock {
+  align-self: end;
   background: linear-gradient(260deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-  box-shadow: inset 0px -8px 2px hsl(349, 56%, 46%);
+  box-shadow: inset 0px -9px 2px hsl(349, 56%, 46%);
 }
 .paper {
   background: linear-gradient(260deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-  box-shadow: inset 0px -8px 2px hsl(230, 51%, 47%);
+  box-shadow: inset 0px -9px 2px hsl(230, 51%, 47%);
+  margin-right: -50px;
 }
 .scissors {
   background: linear-gradient(260deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-  box-shadow: inset 0px -8px 2px hsl(40, 74%, 43%);
+  box-shadow: inset 0px -9px 2px hsl(40, 74%, 43%);
+  margin-left: -50px;
+}
+.background-triangle {
+  position: absolute;
+  width: 500px;
+  margin-top: 100px;
 }
 
 /* responsive */
 
-/* tabrlet */
+/* tablet */
 @media only screen and (max-width: 600px) {
   header {
     width: 450px;
@@ -265,6 +272,20 @@ main div {
   }
   .scores {
     width: 100px;
+  }
+  .objects {
+    height: 340px;
+  }
+  .guide {
+    width: 350px;
+  }
+  .white-bg {
+    padding: 25px;
+  }
+  .background-triangle {
+    position: absolute;
+    width: 400px;
+    margin-top: 150px;
   }
 }
 /* mobile */
