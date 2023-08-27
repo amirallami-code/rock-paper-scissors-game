@@ -193,7 +193,7 @@ main div {
   justify-content: center;
 }
 .level-one {
-  display: none;
+  display: flex;
   flex-direction: column;
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
@@ -336,10 +336,16 @@ footer {
 }
 
 .level-two {
-  display: flex;
+  display: none;
+  opacity: 0;
   align-items: center;
   justify-content: space-between;
-  width: 600px;
+  width: 450px;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -o-transition: all 0.1s;
 }
 .level-two .guide {
   font-size: 17px;
@@ -353,7 +359,7 @@ footer {
   flex-direction: column;
 }
 .notSelected {
-  display: none;
+  display: flex;
   width: 175px;
   height: 180px;
   background-color: hsl(237, 49%, 15%);
@@ -364,8 +370,11 @@ footer {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+.Selected {
+  display: none;
+}
 .result {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;

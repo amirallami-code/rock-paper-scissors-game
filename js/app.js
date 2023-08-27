@@ -10,9 +10,14 @@ const rockElem = $.querySelector('.rock')
 const paperElem = $.querySelector('.paper')
 const scissorsElem = $.querySelector('.scissors')
 
-let userLevel = 2
+const userPickedElem = $.querySelector('.userPicked')
+const levelTwoWrapper = $.querySelector('.level-two')
+
+let userLevel = 1
 let userScore = 0
 let userSelectedObject = null
+
+let objects = ['rock', 'paper', 'scissors']
 
 // find user object
 if (userLevel == 1) {
@@ -33,14 +38,38 @@ if (userLevel == 1) {
             userSelectedObject = 'rock'
         }
 
-        userLevel = 2
-
-        // hide transition
-        setTimeout(() => {
+        if (userSelectedObject != null) {
+            // hide transition
+            setTimeout(() => {
+                levelOneWrapper.style.display = 'none'
+            }, 200)
             levelOneWrapper.style.opacity = '0'
-        }, 200)
-        guideElem.style.opacity = '0'
+            guideElem.style.opacity = '0'
+
+            userLevel = 2
+            objectGenerator(userSelectedObject)
+        }
+
     })
+}
+
+// functions
+const objectGenerator = objectName => {
+
+    // unhide transition
+    setTimeout(() => {
+        levelTwoWrapper.style.display = 'flex'
+    }, 500)
+    levelTwoWrapper.style.opacity = '1'
+
+    let objectTemplate = `
+    <div class="circle ${objectName}">
+        <div class="white-bg">
+            <img src="images/icon-${objectName}.svg" alt="${objectName}" />
+        </div>
+    </div>`
+
+    userPickedElem.insertAdjacentHTML('beforeend', objectTemplate)
 }
 
 
