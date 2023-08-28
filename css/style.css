@@ -201,7 +201,7 @@ main div {
   justify-content: center;
 }
 .level-one {
-  display: none;
+  display: flex;
   flex-direction: column;
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
@@ -351,12 +351,12 @@ footer {
 }
 
 .level-two {
-  display: flex;
-  opacity: 1;
+  display: none;
+  opacity: 0;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 600px;
+  width: 450px;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -396,8 +396,8 @@ footer {
   -o-transition: all 0.3s;
 }
 .result {
-  display: flex;
-  opacity: 1;
+  display: none;
+  opacity: 0;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
