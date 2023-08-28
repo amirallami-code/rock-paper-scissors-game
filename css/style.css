@@ -356,11 +356,11 @@ footer {
   align-items: center;
   justify-content: space-between;
   width: 450px;
-  transition: all 0.1s;
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -ms-transition: all 0.1s;
-  -o-transition: all 0.1s;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
 .level-two .guide {
   font-size: 17px;
@@ -396,10 +396,16 @@ footer {
 }
 .result {
   display: none;
+  opacity: 0;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
   width: 300px;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
 }
 .resultText {
   color: #fff;

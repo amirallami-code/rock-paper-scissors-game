@@ -144,7 +144,12 @@ const definitionLastResult = () => {
 const generatLastResult = result => {
 
     levelTwoWrapper.style.width = '600px'
-    resultElem.style.display = 'flex'
+    setTimeout(() => {
+        resultElem.style.opacity = '1'
+    }, 300)
+    setTimeout(() => {
+        resultElem.style.display = 'flex'
+    }, 100)
 
     if (result === 'lose') {
         resultTextElem.innerHTML = 'YOU LOSE'
