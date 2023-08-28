@@ -66,7 +66,7 @@ const objectGenerator = objectName => {
     levelTwoWrapper.style.opacity = '1'
 
     let objectTemplate = `
-    <div class="circle ${objectName}">
+    <div class="circle ${objectName}" id="${objectName}">
         <div class="white-bg">
             <img src="images/icon-${objectName}.svg" alt="${objectName}" />
         </div>
@@ -95,24 +95,38 @@ const insertObjectToDom = randomNum => {
         }, 2500)
         setTimeout(() => {
             SelectedElem.style.opacity = '1'
+            definitionLastResult()
         }, 2600)
 
         // insert random object in DOM
         let randomObjectTemplate = `
-        <div class="circle ${findRandomObjectName}">
+        <div class="circle ${findRandomObjectName}" id="${findRandomObjectName}">
             <div class="white-bg">
                 <img src="images/icon-${findRandomObjectName}.svg" alt="${findRandomObjectName}" />
             </div>
         </div>`
 
         SelectedElem.insertAdjacentHTML('beforeend', randomObjectTemplate)
-
-        definitionLastResult()
     }
 }
 
 const definitionLastResult = () => {
+    let botObjectWrapper = SelectedElem.querySelector('div').getAttribute('id')
+    let userObjectWrapper = userPickedElem.querySelector('div').getAttribute('id')
 
+    if (botObjectWrapper === 'rock' || userObjectWrapper === 'paper') {
+        console.log('you win');
+    } else if (botObjectWrapper === 'scissors' || userObjectWrapper === 'paper') {
+        console.log('you lose');
+    } else if (botObjectWrapper === 'scissors' || userObjectWrapper === 'rock') {
+        console.log('you win');
+    } else if (botObjectWrapper === 'paper' || userObjectWrapper === 'rock') {
+        console.log('you lose');
+    } else if (botObjectWrapper === 'rock' || userObjectWrapper === 'scissors') {
+        console.log('you lose');
+    } else if (botObjectWrapper === 'paper' || userObjectWrapper === 'scissors') {
+        console.log('you win');
+    }
 }
 
 
