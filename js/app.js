@@ -4,6 +4,8 @@ const rulesBtn = $.querySelector('.rules')
 const modalElem = $.querySelector('.modal')
 const closeBtn = $.querySelector('.close-button')
 
+const userScoreElem = $.querySelector('.user-score')
+
 const levelOneWrapper = $.querySelector('.level-one')
 const guideElem = $.querySelector('.guide')
 const rockElem = $.querySelector('.rock')
@@ -128,20 +130,24 @@ const definitionLastResult = () => {
         userObjectWrapper === 'scissors' && botObjectWrapper === 'rock' ||
         userObjectWrapper === 'paper' && botObjectWrapper === 'scissors') {
         definitionResult = 'lose'
+        userScore++
     } else if (
         userObjectWrapper === 'rock' && botObjectWrapper === 'scissors' ||
         userObjectWrapper === 'scissors' && botObjectWrapper === 'paper' ||
         userObjectWrapper === 'paper' && botObjectWrapper === 'rock'
     ) {
         definitionResult = 'win'
+        userScore--
     } else if (userObjectWrapper === botObjectWrapper) {
         definitionResult = 'equal'
     }
 
-    generatLastResult(definitionResult)
+    generatLastResult(definitionResult, userScore)
 }
 
-const generatLastResult = result => {
+const generatLastResult = (result, userScore) => {
+
+    userScoreElem.innerHTML = userScore
 
     levelTwoWrapper.style.width = '600px'
     setTimeout(() => {
@@ -158,7 +164,6 @@ const generatLastResult = result => {
     } else if (result === 'equal') {
         resultTextElem.innerHTML = 'EQUAL'
     }
-
 }
 
 
