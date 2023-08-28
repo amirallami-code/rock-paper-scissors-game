@@ -134,14 +134,14 @@ const definitionLastResult = () => {
         userObjectWrapper === 'scissors' && botObjectWrapper === 'rock' ||
         userObjectWrapper === 'paper' && botObjectWrapper === 'scissors') {
         definitionResult = 'lose'
-        userScore++
+        userScore--
     } else if (
         userObjectWrapper === 'rock' && botObjectWrapper === 'scissors' ||
         userObjectWrapper === 'scissors' && botObjectWrapper === 'paper' ||
         userObjectWrapper === 'paper' && botObjectWrapper === 'rock'
     ) {
         definitionResult = 'win'
-        userScore--
+        userScore++
     } else if (userObjectWrapper === botObjectWrapper) {
         definitionResult = 'equal'
     }
