@@ -144,7 +144,15 @@ textarea {
 }
 
 /* styles */
-
+.non-select {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.non-select:hover {
+  cursor: default;
+}
 header {
   width: 550px;
   height: 130px;
@@ -204,7 +212,7 @@ main div {
 .guide {
   color: #fff;
   font-size: 25px;
-  padding: 35px 10px;
+  padding: 25px 10px;
   letter-spacing: 0.5px;
   text-align: center;
   transition: all 0.2s;
@@ -212,6 +220,13 @@ main div {
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.guide {
+  cursor: default;
 }
 .objects {
   height: 370px;
