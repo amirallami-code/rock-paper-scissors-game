@@ -201,7 +201,7 @@ main div {
   justify-content: center;
 }
 .level-one {
-  display: flex;
+  display: none;
   flex-direction: column;
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
@@ -351,8 +351,9 @@ footer {
 }
 
 .level-two {
-  display: none;
-  opacity: 0;
+  display: flex;
+  opacity: 1;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 450px;
@@ -458,18 +459,32 @@ footer {
   }
   .guide {
     font-size: 20px;
-    width: 350px;
   }
   .white-bg {
     padding: 25px;
   }
   .background-triangle {
     position: absolute;
-    width: 300px;
-    margin-top: 150px;
+    width: 250px;
+    margin-top: 120px;
   }
   footer {
     justify-content: center;
+  }
+  .level-two {
+    width: auto;
+  }
+  .userPicked {
+    width: 170px;
+    flex-direction: column-reverse;
+  }
+  .botPicked {
+    width: 170px;
+    flex-direction: column-reverse;
+  }
+  .notSelected {
+    width: 145px;
+    height: 150px;
   }
 }
 /* mobile */
@@ -517,7 +532,6 @@ footer {
     width: 250px;
   }
   .background-triangle {
-    width: 230px;
-    margin-top: 150px;
+    width: 200px;
   }
 }
