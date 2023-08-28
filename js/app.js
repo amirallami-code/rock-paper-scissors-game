@@ -114,19 +114,17 @@ const definitionLastResult = () => {
     let botObjectWrapper = SelectedElem.querySelector('div').getAttribute('id')
     let userObjectWrapper = userPickedElem.querySelector('div').getAttribute('id')
 
-    if (userObjectWrapper === 'rock' || botObjectWrapper === 'paper') {
-        console.log('you win');
-    } else if (userObjectWrapper === 'scissors' || botObjectWrapper === 'paper') {
+    if (userObjectWrapper === 'rock' && botObjectWrapper === 'paper' ||
+        userObjectWrapper === 'scissors' && botObjectWrapper === 'rock' ||
+        userObjectWrapper === 'paper' && botObjectWrapper === 'scissors') {
         console.log('you lose');
-    } else if (userObjectWrapper === 'scissors' || botObjectWrapper === 'rock') {
+    } else if (
+        userObjectWrapper === 'rock' && botObjectWrapper === 'scissors' ||
+        userObjectWrapper === 'scissors' && botObjectWrapper === 'paper' ||
+        userObjectWrapper === 'paper' && botObjectWrapper === 'rock'
+    ) {
         console.log('you win');
-    } else if (userObjectWrapper === 'paper' || botObjectWrapper === 'rock') {
-        console.log('you lose');
-    } else if (userObjectWrapper === 'rock' || botObjectWrapper === 'scissors') {
-        console.log('you lose');
-    } else if (userObjectWrapper === 'paper' || botObjectWrapper === 'scissors') {
-        console.log('you win');
-    } else {
+    } else if (userObjectWrapper === botObjectWrapper) {
         console.log("mosavi");
     }
 }
