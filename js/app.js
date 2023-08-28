@@ -15,6 +15,10 @@ const levelTwoWrapper = $.querySelector('.level-two')
 const notSelectedElem = $.querySelector('.notSelected')
 const SelectedElem = $.querySelector('.Selected')
 
+const resultElem = $.querySelector('.result')
+const resultTextElem = $.querySelector('.resultText')
+const resultButtonElem = $.querySelector('.resultButton')
+
 let userLevel = 1
 let userScore = 0
 let userSelectedObject = null
@@ -55,6 +59,10 @@ if (userLevel == 1) {
         }
     })
 }
+
+resultButtonElem.addEventListener('click', () => {
+    window.location.reload()
+})
 
 // functions
 const objectGenerator = objectName => {
@@ -111,22 +119,41 @@ const insertObjectToDom = randomNum => {
 }
 
 const definitionLastResult = () => {
+
+    let definitionResult = null
     let botObjectWrapper = SelectedElem.querySelector('div').getAttribute('id')
     let userObjectWrapper = userPickedElem.querySelector('div').getAttribute('id')
 
     if (userObjectWrapper === 'rock' && botObjectWrapper === 'paper' ||
         userObjectWrapper === 'scissors' && botObjectWrapper === 'rock' ||
         userObjectWrapper === 'paper' && botObjectWrapper === 'scissors') {
-        console.log('you lose');
+        definitionResult = 'lose'
     } else if (
         userObjectWrapper === 'rock' && botObjectWrapper === 'scissors' ||
         userObjectWrapper === 'scissors' && botObjectWrapper === 'paper' ||
         userObjectWrapper === 'paper' && botObjectWrapper === 'rock'
     ) {
-        console.log('you win');
+        definitionResult = 'win'
     } else if (userObjectWrapper === botObjectWrapper) {
-        console.log("mosavi");
+        definitionResult = 'equal'
     }
+
+    generatLastResult(definitionResult)
+}
+
+const generatLastResult = result => {
+
+    levelTwoWrapper.style.width = '600px'
+    resultElem.style.display = 'flex'
+
+    if (result === 'lose') {
+        resultTextElem.innerHTML = 'YOU LOSE'
+    } else if (result === 'win') {
+        resultTextElem.innerHTML = 'YOU WIN'
+    } else if (result === 'equal') {
+        resultTextElem.innerHTML = 'EQUAL'
+    }
+
 }
 
 
