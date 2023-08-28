@@ -28,6 +28,9 @@ let randomNumber = null
 
 let objects = ['rock', 'paper', 'scissors']
 
+userScore = localStorage.getItem('score')
+
+userScoreElem.innerHTML = userScore
 
 // find user clicked object
 if (userLevel == 1) {
@@ -63,6 +66,7 @@ if (userLevel == 1) {
 }
 
 resultButtonElem.addEventListener('click', () => {
+    localStorage.setItem('score', userScore)
     window.location.reload()
 })
 
