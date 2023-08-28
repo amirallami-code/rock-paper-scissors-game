@@ -12,14 +12,18 @@ const scissorsElem = $.querySelector('.scissors')
 
 const userPickedElem = $.querySelector('.userPicked')
 const levelTwoWrapper = $.querySelector('.level-two')
+const notSelectedElem = $.querySelector('.notSelected')
+const SelectedElem = $.querySelector('.Selected')
 
 let userLevel = 1
 let userScore = 0
 let userSelectedObject = null
+let randomNumber = null
 
 let objects = ['rock', 'paper', 'scissors']
 
-// find user object
+
+// find user clicked object
 if (userLevel == 1) {
     levelOneWrapper.addEventListener('click', event => {
         let userObjectClass = event.target.getAttribute("class")
@@ -49,7 +53,6 @@ if (userLevel == 1) {
             userLevel = 2
             objectGenerator(userSelectedObject)
         }
-
     })
 }
 
@@ -70,10 +73,47 @@ const objectGenerator = objectName => {
     </div>`
 
     userPickedElem.insertAdjacentHTML('beforeend', objectTemplate)
+
+    generateRandomNumber(randomNumber)
 }
 
+const generateRandomNumber = randomNumber => {
+    let createRandomNum = Math.floor(Math.random() * 2.5)
 
+    randomNumber = createRandomNum
 
+    insertObjectToDom(randomNumber)
+}
+
+const insertObjectToDom = randomNum => {
+    let findRandomObjectName = objects[randomNum]
+
+    if (findRandomObjectName != undefined) {
+        setTimeout(() => {
+            notSelectedElem.style.display = 'none'
+            SelectedElem.style.display = 'flex'
+        }, 2500)
+        setTimeout(() => {
+            SelectedElem.style.opacity = '1'
+        }, 2600)
+
+        // insert random object in DOM
+        let randomObjectTemplate = `
+        <div class="circle ${findRandomObjectName}">
+            <div class="white-bg">
+                <img src="images/icon-${findRandomObjectName}.svg" alt="${findRandomObjectName}" />
+            </div>
+        </div>`
+
+        SelectedElem.insertAdjacentHTML('beforeend', randomObjectTemplate)
+
+        definitionLastResult()
+    }
+}
+
+const definitionLastResult = () => {
+
+}
 
 
 // rules button logic
