@@ -143,7 +143,7 @@ const definitionLastResult = () => {
         definitionResult = 'win'
         userScore++
     } else if (userObjectWrapper === botObjectWrapper) {
-        definitionResult = 'equal'
+        definitionResult = 'draw'
     }
 
     generatLastResult(definitionResult, userScore)
@@ -165,8 +165,8 @@ const generatLastResult = (result, userScore) => {
         resultTextElem.innerHTML = 'YOU LOSE'
     } else if (result === 'win') {
         resultTextElem.innerHTML = 'YOU WIN'
-    } else if (result === 'equal') {
-        resultTextElem.innerHTML = 'EQUAL'
+    } else if (result === 'draw') {
+        resultTextElem.innerHTML = 'DRAW'
     }
 }
 

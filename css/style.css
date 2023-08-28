@@ -356,7 +356,7 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 450px;
+  width: 600px;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -396,12 +396,12 @@ footer {
   -o-transition: all 0.3s;
 }
 .result {
-  display: none;
-  opacity: 0;
+  display: flex;
+  opacity: 1;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  width: 300px;
+  width: auto;
   transition: all 1s;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
@@ -450,7 +450,7 @@ footer {
   .objects {
     height: 290px;
   }
-  .objects img {
+  .circle img {
     max-width: 55px;
     height: 60px;
   }
@@ -472,19 +472,36 @@ footer {
     justify-content: center;
   }
   .level-two {
+    display: flex;
+    align-items: start;
+    height: 400px;
     width: auto;
   }
+  .result {
+    align-self: end;
+  }
+  .resultText {
+    font-size: 30px;
+  }
   .userPicked {
-    width: 170px;
+    width: 180px;
     flex-direction: column-reverse;
+    margin-right: -70px;
   }
   .botPicked {
-    width: 170px;
+    width: 180px;
     flex-direction: column-reverse;
+    margin-left: -70px;
   }
   .notSelected {
-    width: 145px;
-    height: 150px;
+    width: 135px;
+    height: 140px;
+  }
+  .userPicked .guide {
+    font-size: 17px;
+  }
+  .botPicked .guide {
+    font-size: 17px;
   }
 }
 /* mobile */
@@ -521,17 +538,33 @@ footer {
   .objects {
     height: 240px;
   }
-  .objects img {
+  .circle img {
     max-width: 45px;
     height: 50px;
   }
   .circle {
     padding: 10px;
   }
-  .guide {
+  .level-one .guide {
     width: 250px;
   }
   .background-triangle {
     width: 200px;
+  }
+  .notSelected {
+    width: 115px;
+    height: 120px;
+  }
+  .userPicked {
+    width: 140px;
+  }
+  .botPicked {
+    width: 140px;
+  }
+  .userPicked .guide {
+    font-size: 12.5px;
+  }
+  .botPicked .guide {
+    font-size: 12.5px;
   }
 }
