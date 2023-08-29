@@ -153,7 +153,9 @@ const generatLastResult = (result, userScore) => {
 
     userScoreElem.innerHTML = userScore
 
-    levelTwoWrapper.style.width = '600px'
+    if (window.innerWidth > 600) {
+        levelTwoWrapper.style.width = '600px'
+    }
     setTimeout(() => {
         resultElem.style.opacity = '1'
     }, 300)
@@ -163,8 +165,14 @@ const generatLastResult = (result, userScore) => {
 
     if (result === 'lose') {
         resultTextElem.innerHTML = 'YOU LOSE'
+        setTimeout(() => {
+            SelectedElem.style.filter = 'grayscale(1)'
+        }, 600)
     } else if (result === 'win') {
         resultTextElem.innerHTML = 'YOU WIN'
+        setTimeout(() => {
+            userPickedElem.style.filter = 'grayscale(1)'
+        }, 600)
     } else if (result === 'draw') {
         resultTextElem.innerHTML = 'DRAW'
     }
