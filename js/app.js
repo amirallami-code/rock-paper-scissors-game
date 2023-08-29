@@ -166,11 +166,13 @@ const generatLastResult = (result, userScore) => {
         resultTextElem.innerHTML = 'YOU LOSE'
         setTimeout(() => {
             userPickedElem.style.filter = 'grayscale(1)'
+            userPickedElem.style.opacity = '0.6'
         }, 400)
     } else if (result === 'win') {
         resultTextElem.innerHTML = 'YOU WIN'
         setTimeout(() => {
             SelectedElem.style.filter = 'grayscale(1)'
+            SelectedElem.style.opacity = '0.6'
         }, 400)
     } else if (result === 'draw') {
         resultTextElem.innerHTML = 'DRAW'
