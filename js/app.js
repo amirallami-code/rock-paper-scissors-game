@@ -87,15 +87,12 @@ const objectGenerator = objectName => {
     </div>`
 
     userPickedElem.insertAdjacentHTML('beforeend', objectTemplate)
-
     generateRandomNumber(randomNumber)
 }
 
 const generateRandomNumber = randomNumber => {
     let createRandomNum = Math.floor(Math.random() * 2.5)
-
     randomNumber = createRandomNum
-
     insertObjectToDom(randomNumber)
 }
 
@@ -145,7 +142,6 @@ const definitionLastResult = () => {
     } else if (userObjectWrapper === botObjectWrapper) {
         definitionResult = 'draw'
     }
-
     generatLastResult(definitionResult, userScore)
 }
 
@@ -177,7 +173,6 @@ const generatLastResult = (result, userScore) => {
         resultTextElem.innerHTML = 'DRAW'
     }
 }
-
 
 // rules button logic
 rulesBtn.addEventListener('click', () => {
