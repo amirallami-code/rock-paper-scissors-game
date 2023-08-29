@@ -28,6 +28,9 @@ let randomNumber = null
 
 let objects = ['rock', 'paper', 'scissors']
 
+if (localStorage.getItem('score') === null) {
+    localStorage.setItem('score', userScore)
+}
 userScore = localStorage.getItem('score')
 
 userScoreElem.innerHTML = userScore
