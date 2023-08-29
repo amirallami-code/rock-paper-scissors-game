@@ -70,7 +70,10 @@ if (userLevel == 1) {
 
 resultButtonElem.addEventListener('click', () => {
     localStorage.setItem('score', userScore)
-    window.location.reload()
+    setTimeout(() => {
+        window.location.reload()
+    }, 500)
+    levelTwoWrapper.style.opacity = '0'
 })
 
 // functions
