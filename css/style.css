@@ -159,7 +159,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 30px 30px 0px 30px;
+  margin: 20px 30px 0px 30px;
   padding: 12.5px 20px;
   border: 3px solid hsl(217, 16%, 45%);
   border-radius: 10px;
@@ -260,6 +260,9 @@ main div {
   max-width: 65px;
   height: 70px;
 }
+/* .white-bg img:hover {
+  cursor: pointer;
+} */
 .objects .paper {
   margin-right: -50px;
 }
