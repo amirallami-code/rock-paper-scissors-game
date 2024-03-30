@@ -1,5 +1,7 @@
 let $ = document
 
+const preloaderElement = $.querySelector('.preloader')
+
 const rulesBtn = $.querySelector('.rules')
 const modalElem = $.querySelector('.modal')
 const closeBtn = $.querySelector('.close-button')
@@ -34,6 +36,13 @@ if (localStorage.getItem('score') === null) {
 userScore = localStorage.getItem('score')
 
 userScoreElem.innerHTML = userScore
+
+window.addEventListener('load' , function () {
+    preloaderElement.style.opacity = 0;
+    this.setTimeout(function(){
+        preloaderElement.style.display = "none";
+    }, 1050)
+})
 
 // find user clicked object
 if (userLevel == 1) {
@@ -70,6 +79,8 @@ if (userLevel == 1) {
 
 resultButtonElem.addEventListener('click', () => {
     localStorage.setItem('score', userScore)
+    preloaderElement.style.opacity = 100;
+    preloaderElement.style.display = "flex";
     setTimeout(() => {
         window.location.reload()
     }, 500)
