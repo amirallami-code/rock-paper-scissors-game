@@ -253,6 +253,7 @@ main div {
   align-items: flex-start;
 }
 .circle {
+  align-self: auto;
   padding: 20px;
   clip-path: circle();
   border-radius: 50%;

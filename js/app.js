@@ -37,9 +37,9 @@ userScore = localStorage.getItem('score')
 
 userScoreElem.innerHTML = userScore
 
-window.addEventListener('load' , function () {
+window.addEventListener('load', function () {
     preloaderElement.style.opacity = 0;
-    this.setTimeout(function(){
+    this.setTimeout(function () {
         preloaderElement.style.display = "none";
     }, 1050)
 })
@@ -61,6 +61,8 @@ if (userLevel == 1) {
         } else if (userObjectClass == 'circle rock' && userObjectAlt == null || userObjectClass == null && userObjectAlt == 'rock') {
 
             userSelectedObject = 'rock'
+        } else if (userObjectAlt == 'holder') {
+            userSelectedObject = event.target.children[0].alt
         }
 
         if (userSelectedObject != null) {
