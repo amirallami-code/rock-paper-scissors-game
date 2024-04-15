@@ -26,6 +26,10 @@
         - **HTML**: Create the structure of the game, including buttons for rock, paper, and scissors.
         - **CSS**: Style the buttons and layout.
         - **JS**: Add interactivity by handling button clicks, determining the winner, and updating the score.
+## Preview
+go to this link and see the preview of this project online
+
+https://rpsgame-amirallami.vercel.app
 
 ## Installation
 
