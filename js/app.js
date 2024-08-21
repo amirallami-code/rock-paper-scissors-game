@@ -22,6 +22,7 @@ const SelectedElem = $.querySelector('.Selected')
 const resultElem = $.querySelector('.result')
 const resultTextElem = $.querySelector('.resultText')
 const resultButtonElem = $.querySelector('.resultButton')
+const resetScoreBtn = $.querySelector(".resetScoreBtn");
 
 let userLevel = 1
 let userScore = 0
@@ -74,12 +75,15 @@ if (userLevel == 1) {
             guideElem.style.opacity = '0'
 
             userLevel = 2
-            objectGenerator(userSelectedObject)
+            setTimeout(() => {
+                objectGenerator(userSelectedObject)
+            }, 500);
         }
     })
 }
 
-resultButtonElem.addEventListener('click', () => {
+// functions
+const changeScore = () => {
     localStorage.setItem('score', userScore)
     preloaderElement.style.opacity = 100;
     preloaderElement.style.display = "flex";
@@ -87,16 +91,15 @@ resultButtonElem.addEventListener('click', () => {
         window.location.reload()
     }, 500)
     levelTwoWrapper.style.opacity = '0'
-})
+}
 
-// functions
 const objectGenerator = objectName => {
 
     // unhide transition
     setTimeout(() => {
-        levelTwoWrapper.style.display = 'flex'
+        levelTwoWrapper.style.opacity = '1'
     }, 500)
-    levelTwoWrapper.style.opacity = '1'
+    levelTwoWrapper.style.display = 'flex'
 
     let objectTemplate = `
     <div class="circle ${objectName}" id="${objectName}">
@@ -122,11 +125,11 @@ const insertObjectToDom = randomNum => {
         setTimeout(() => {
             notSelectedElem.style.display = 'none'
             SelectedElem.style.display = 'flex'
-        }, 2500)
+        }, 1900)
         setTimeout(() => {
             SelectedElem.style.opacity = '1'
             definitionLastResult()
-        }, 2600)
+        }, 2000)
 
         // insert random object in DOM
         let randomObjectTemplate = `
@@ -179,12 +182,14 @@ const generatLastResult = (result, userScore) => {
     }, 100)
 
     if (result === 'lose') {
+        resultTextElem.style.color = "#dc2e4e";
         resultTextElem.innerHTML = 'YOU LOSE'
         setTimeout(() => {
             userPickedElem.style.filter = 'grayscale(1)'
             userPickedElem.style.opacity = '0.6'
         }, 400)
     } else if (result === 'win') {
+        resultTextElem.style.color = "#31dc2e";
         resultTextElem.innerHTML = 'YOU WIN'
         setTimeout(() => {
             SelectedElem.style.filter = 'grayscale(1)'
@@ -207,4 +212,11 @@ closeBtn.addEventListener('click', () => {
     modalElem.style.display = 'none'
     modalElem.style.opacity = '0'
     modalElem.style.backgroundColor = 'transparent'
+})
+resultButtonElem.addEventListener('click', () => {
+    changeScore();
+})
+resetScoreBtn.addEventListener("click", () => {
+    userScore = 0;
+    changeScore();
 })
