@@ -39,8 +39,11 @@
     align-items: start;
     height: 320px;
     width: 320px;
+    grid-template-columns: auto auto;
   }
   .result {
+    grid-area: 2 / 2 / 2 / 2;
+    grid-column: 1 / span 2;
     align-self: end;
     margin: 0px -100px;
   }
@@ -48,7 +51,7 @@
     font-size: 30px;
   }
   .userPicked {
-    /* width: 150px; */
+    width: 150px;
     flex-direction: column-reverse;
   }
   .botPicked {

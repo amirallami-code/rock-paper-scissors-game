@@ -99,7 +99,7 @@ const objectGenerator = objectName => {
     setTimeout(() => {
         levelTwoWrapper.style.opacity = '1'
     }, 500)
-    levelTwoWrapper.style.display = 'flex'
+    levelTwoWrapper.style.display = 'grid'
 
     let objectTemplate = `
     <div class="circle ${objectName}" id="${objectName}">
@@ -168,18 +168,11 @@ const definitionLastResult = () => {
 }
 
 const generatLastResult = (result, userScore) => {
-
     userScoreElem.innerHTML = userScore
-
-    if (window.innerWidth > 600) {
-        levelTwoWrapper.style.width = '600px'
-    }
     setTimeout(() => {
+        resultElem.style.width = 'max-content';
         resultElem.style.opacity = '1'
-    }, 300)
-    setTimeout(() => {
-        resultElem.style.display = 'flex'
-    }, 100)
+    }, 650)
 
     if (result === 'lose') {
         resultTextElem.style.color = "#dc2e4e";

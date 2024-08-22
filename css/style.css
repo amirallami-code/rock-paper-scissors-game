@@ -374,16 +374,14 @@ footer {
 
 .level-two {
   display: none;
+  grid-template-columns: auto auto auto;
+  column-gap: 20px;
   opacity: 0;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 450px;
-  transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
+  transition: all 0.7s ease-in-out;
 }
 .level-two .guide {
   font-size: 17px;
@@ -423,17 +421,18 @@ footer {
   -o-transition: all 0.3s;
 }
 .result {
-  display: none;
+  display: flex;
   opacity: 0;
+  overflow: hidden;
+  width: 0;
+  height: max-content;
+  justify-self: center;
+
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
   width: auto;
-  transition: all 1s;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -ms-transition: all 1s;
-  -o-transition: all 1s;
+  transition: all 0.5s ease-in-out;
 }
 .resultText {
   color: #fff;
