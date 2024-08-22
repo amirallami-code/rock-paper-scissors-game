@@ -59,13 +59,13 @@ To run this project locally:
   git clone https://github.com/amirallami-code/rock-paper-scissors-game.git
 ```
 
- 3. Navigate to the project directory: 
+ 2. Navigate to the project directory: 
 
 ```bash
   cd rock-paper-scissors-game
 ```
 
- 4. Open `index.html` in your preferred web browser 
+ 3. Open `index.html` in your preferred web browser 
 
 ## Usage
 
