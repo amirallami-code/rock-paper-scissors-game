@@ -375,7 +375,6 @@ footer {
 .level-two {
   display: none;
   grid-template-columns: auto auto auto;
-  column-gap: 20px;
   opacity: 0;
   flex-direction: column;
   align-items: center;
