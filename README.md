@@ -1,5 +1,7 @@
 # Rock, Paper, Scissors Game
 
+![demo](images/demo.jpg)
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [How to Play](#how-to-play)
