@@ -95,7 +95,8 @@ This project is open source and available under the [MIT License](LICENSE).
 ## Contact Information
 
 For questions or feedback about this project, please contact:
-amirallami.dev@gmail.com
+
+Amirhossein Allami - amirallami.dev@gmail.com
 
 Project Link: [https://github.com/amirallami-code/rock-paper-scissors-game](https://github.com/amirallami-code/rock-paper-scissors-game)
 
