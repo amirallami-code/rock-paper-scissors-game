@@ -375,11 +375,12 @@ footer {
 .level-two {
   display: none;
   grid-template-columns: auto auto auto;
+  column-gap: 5px;
   opacity: 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 450px;
+  width: auto;
   transition: all 0.7s ease-in-out;
 }
 .level-two .guide {
