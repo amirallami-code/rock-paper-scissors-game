@@ -2,6 +2,14 @@
 
 ![demo](images/demo.jpg)
 
+[![MIT License](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)
+![Last Update](https://img.shields.io/github/last-commit/amirallami-code/rock-paper-scissors-game?style=flat&color=blue)
+[![Stars](https://img.shields.io/github/stars/amirallami-code/rock-paper-scissors-game?style=flat&color=yellow)](https://github.com/amirallami-code/binary-search-algorithm/)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)
+![Contributions Welcome](https://img.shields.io/badge/Contributions-welcome-brightgreen)
+
+
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [How to Play](#how-to-play)
