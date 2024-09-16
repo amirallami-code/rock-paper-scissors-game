@@ -110,4 +110,4 @@ Project Link: [https://github.com/amirallami-code/rock-paper-scissors-game](http
 
 ---
 
-Feel free to star ⭐ this repository if you find it helpful!
+We appreciate your interest in this project. If you find it helpful, consider starring the repository.
